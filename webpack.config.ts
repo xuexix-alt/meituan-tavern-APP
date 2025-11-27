@@ -405,7 +405,11 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
                 selfDefending: true,
                 simplify: true,
                 splitStrings: true,
+<<<<<<< HEAD
                 seed: import.meta.dirname.length,
+=======
+                seed: 1,
+>>>>>>> d2350a74db47288910c27141f294e6696edcb49d
               }),
             ]
           : [],
@@ -458,6 +462,10 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
         request.startsWith('/') ||
         request.startsWith('!') ||
         request.startsWith('http') ||
+<<<<<<< HEAD
+=======
+        request.startsWith('@/') ||
+>>>>>>> d2350a74db47288910c27141f294e6696edcb49d
         path.isAbsolute(request) ||
         fs.existsSync(path.join(context, request)) ||
         fs.existsSync(request)
